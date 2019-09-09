@@ -23,14 +23,14 @@ BitmexApi bitmex = new BitmexApi(bitmexKey, bitmexSecret);
 
 //Using
 //GET
-var orders = bitmex.GetOrders("XBTUSD");//RETURN JSON - ALL TYPES ARE JUST PREDEFINED IN CLASS
-var positions = bitmex.GetPositions("ETHXBT");//RETURN JSON - ALL TYPES ARE JUST PREDEFINED IN CLASS
-var orderbook = bitmex.GetOrderBook("XBt", 25);//RETURN JSON - ALL TYPES ARE JUST PREDEFINED IN CLASS
+var orders = bitmex.GetOrders("XBTUSD");
+var positions = bitmex.GetPositions("ETHXBT");
+var orderbook = bitmex.GetOrderBook("XBt", 25);
 var apiKey = bitmex.GetApiKey();//RETURN JSON
-var depositAddress = bitmex.MyDeopsitAddress();//RETURN string BTC_ADDRESS
-var marginBalance = bitmex.MarginBalance();//RETURN string BTC
-var walletBalance = bitmex.WalletBalance();//RETURN string BTC
-var avalaibleBalance = bitmex.AvalaibleBalance();//RETURN string BTC
+var depositAddress = bitmex.MyDeopsitAddress();
+var marginBalance = bitmex.MarginBalance();
+var walletBalance = bitmex.WalletBalance();
+var avalaibleBalance = bitmex.AvalaibleBalance();
 
 //POST
 bitmex.PostOrderLimit("XBTUSD", "Buy", "1", "5000");
@@ -44,11 +44,12 @@ bitmex.DeleteAllOrders();
 bitmex.DeleteOrderByID("Order_id_from_GetOrders_first_columns");
 bitmex.PostLeverage("XBTUSD", "20");
 bitmex.TransferMargin("XBTUSD", "150000");
-bitmex.Withdrawal_Request("150000", "n43Ydq8NHrYVGxCk1AHP8ofFQ8j8w3LvSB", "google_auth_token");//API KEYS MUST HAVE A PERMISSION
-bitmex.Withdrawal_Confirm("google_auth_token");//API KEYS MUST HAVE A PERMISSION
+bitmex.Withdrawal_Request("amount_satosi", "btc_address", "google_auth_token");
+bitmex.Withdrawal_Confirm("google_auth_token");
 
 //Deserialize JSON example
-var orders_ = JsonConvert.DeserializeObject<Orders[]>(orders); //All types are predefined in Bimex.IO class
+var orders_ = JsonConvert.DeserializeObject<Orders[]>(orders); 
+//All types are predefined in Bimex.IO class
 
 Predefinet types:
 <OrderBookItem[]>
