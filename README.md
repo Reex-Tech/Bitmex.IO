@@ -18,11 +18,15 @@ BitmexApi bitmex = new BitmexApi(bitmexKey, bitmexSecret,"mainnet");
 
 //for testnet:
 BitmexApi bitmex = new BitmexApi(bitmexKey, bitmexSecret,"testnet");
+
 or
+
 BitmexApi bitmex = new BitmexApi(bitmexKey, bitmexSecret);
 
-//Using
+
+
 //GET
+
 var orders = bitmex.GetOrders("XBTUSD");
 var positions = bitmex.GetPositions("ETHXBT");
 var orderbook = bitmex.GetOrderBook("XBt", 25);
@@ -33,6 +37,7 @@ var walletBalance = bitmex.WalletBalance();
 var avalaibleBalance = bitmex.AvalaibleBalance();
 
 //POST
+
 bitmex.PostOrderLimit("XBTUSD", "Buy", "1", "5000");
 bitmex.PostOrderMarket("XBTUSD", "Buy", "1");
 bitmex.PostOrderStopMarket("XBTUSD", "Sell", "1", "9000");
