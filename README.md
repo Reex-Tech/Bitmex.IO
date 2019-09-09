@@ -1,35 +1,30 @@
 # Bitmex.IO
 Wrapper for BitMEX.com API
-
+//
 Requires:
 Newtosoft.Json
-
+//
 Instalation:
 PM> Install-Package BitMEX.IO -Version 1.7.1
-.
+//
 PM> Install-Package Newtonsoft.Json -Version 12.0.3-beta1
-.
-.
+//
 Full version here:
-.
+//
 https://satoshidisk.com/pay/C7QRdS  ->> Only $99
-.
-.
+//
 c#
 Using BitMEX.IO
-.
+//
 // Initialize
 public static string bitmexKey = "ApiKey";
-.
+//
 public static string bitmexSecret = "SecretKey";
-.
+//
 BitmexApi bitmex = new BitmexApi(bitmexKey, bitmexSecret,"mainnet");
-.
-.
-.
-.
+//
 //for testnet:
-.
+//
 BitmexApi bitmex = new BitmexApi(bitmexKey, bitmexSecret,"testnet");
 .
 .
