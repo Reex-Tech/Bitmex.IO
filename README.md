@@ -11,7 +11,10 @@ PM> Install-Package Newtonsoft.Json -Version 12.0.3-beta1
 //
 Full version here:
 //
+
 https://satoshidisk.com/pay/C7QRdS  ->> Only $99
+
+
 //
 c#
 Using BitMEX.IO
