@@ -125,16 +125,27 @@ Predefinet types:
 Free version includes:
 
 bitmex.GetOrders("XBTUSD");
+
 bitmex.GetOrderBook("symbol", depth); //only XBT for free version
+
 var apiKey = bitmex.GetApiKey();
+
 bitmex.PostOrderMarket("symbol", "side", "quantity"); // Only Sell side for free version
+
 bitmex.PostOrderLimit("symbol", "side", "quantity");// Only Sell side for free version
+
 bitmex.ClosePosition("symbol", "quantity");//only XBT for free version
+
 bitmex.PostLeverage("symbol", "leverage");
+
 bitmex.DeleteAllOrders();
+
 bitmex.MarginBalance();
+
 bitmex.WalletBalance();
+
 bitmex.MyDeopsitAddress();
+
 
 
 
